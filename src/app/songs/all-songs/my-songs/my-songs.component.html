@@ -1,0 +1,14 @@
+<h3 class="text-3xl font-extrabold mt-5">My Songs</h3>
+<ul class="list-group">
+  <li
+    class="list-group-item song-item"
+    *ngFor="let mySong of mySongs; let i = index"
+  >
+    <app-one-song [mySong]="mySong"></app-one-song>
+    <button
+      type="button"
+      class="bi bi-dash-square text-5xl"
+      (click)="onDeleteSong(mySong, i)"
+    ></button>
+  </li>
+</ul>

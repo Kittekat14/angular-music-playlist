@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: #fcf4a3;
+}
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border-radius: 15px;
+
+  &:first-child {
+    border-radius: 15px;
+  }
+
+  &:last-child {
+    border-radius: 15px;
+  }
+}

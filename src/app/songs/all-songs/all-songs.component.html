@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="col-sm-6">
+      <app-my-songs
+        [mySongs]="mySongs"
+        (songSelected)="onAddSong($event)"
+      ></app-my-songs>
+    </div>
+    <div class="col-sm-6">
+      <h3 class="text-3xl font-extrabold mt-8">All Songs</h3>
+      <ul class="list-group">
+        <li class="list-group-item song-item" *ngFor="let song of allSongs">
+          <app-one-song [mySong]="song"></app-one-song>
+          <button
+            type="button"
+            class="bi bi-plus-circle text-5xl"
+            (click)="onAddSong(song)"
+          ></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

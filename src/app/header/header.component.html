@@ -1,0 +1,11 @@
+<ng-template #noNameChange>
+  <app-playlist-name [playlistName]="playlistName"></app-playlist-name>
+</ng-template>
+<input
+  *ngIf="editInputVisible; else noNameChange"
+  (submit)="onEditPlaylistName()"
+  [(ngModel)]="playlistName"
+/>
+<button type="button" (click)="editInputVisible = !editInputVisible">
+  Change
+</button>
